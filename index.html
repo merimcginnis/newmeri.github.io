@@ -37,7 +37,7 @@
             border-bottom-right-radius: 10px;
             margin-top: 20px;
         }
-        h1 {
+        h1, h2 {
             color: #007bff; /* Blue color */
             text-align: center;
         }
@@ -59,16 +59,54 @@
         .about-us {
             margin-top: 50px;
         }
-        .about-us h2 {
-            color: #007bff; /* Blue color */
-            text-align: center;
-        }
         .about-us p {
             text-align: center;
             line-height: 1.5;
         }
-        footer p {
-            margin-bottom: 5px;
+        .faq {
+            margin-top: 50px;
+        }
+        .faq h2 {
+            color: #007bff; /* Blue color */
+            text-align: center;
+        }
+        .faq ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .faq li {
+            margin-bottom: 20px;
+        }
+        .faq li strong {
+            color: #3e2723; /* Brown color */
+        }
+        .contact-form {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form textarea {
+            height: 150px;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #007bff; /* Blue color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue color on hover */
         }
     </style>
 </head>
@@ -77,7 +115,7 @@
         <h1>Campus Crates</h1>
     </header>
     <div class="container">
-        <h1>Subscribe to School Supplies</h1>
+        <h2>Subscribe to School Supplies</h2>
         <div class="subscription-options">
             <div class="subscription-option">
                 <button onclick="subscribe('basic')">Basic Subscription</button>
@@ -91,6 +129,34 @@
             <h2>About Us</h2>
             <p>We are dedicated to providing high-quality school supplies to students around the world. Our mission is to make the process of obtaining school essentials convenient and affordable for everyone.</p>
         </div>
+
+        <div class="faq">
+            <h2>FAQ</h2>
+            <ul>
+                <li>
+                    <strong>Q: Can I cancel my subscription at any time?</strong><br>
+                    A: Yes, you can cancel your subscription anytime by contacting our customer support team.
+                </li>
+                <li>
+                    <strong>Q: How do I change my subscription plan?</strong><br>
+                    A: You can change your subscription plan by logging into your account and selecting the desired plan.
+                </li>
+                <li>
+                    <strong>Q: When will I receive my first shipment?</strong><br>
+                    A: Your first shipment will be dispatched within 2-3 business days after subscribing.
+                </li>
+            </ul>
+        </div>
+
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <input type="email" name="email" placeholder="Your Email" required><br>
+                <textarea name="message" placeholder="Your Message" required></textarea><br>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
     </div>
     <footer>
         <p>Email: example@example.com</p>
@@ -103,4 +169,19 @@
             switch (plan) {
                 case 'basic':
                     message = "You subscribed to the Basic Subscription. You will receive essential school supplies.";
-                  
+                    break;
+                case 'standard':
+                    message = "You subscribed to the Standard Subscription. You will receive a wider range of school supplies.";
+                    break;
+                case 'premium':
+                    message = "You subscribed to the Premium Subscription. You will receive premium-quality school supplies.";
+                    break;
+                default:
+                    message = "Invalid subscription option.";
+                    break;
+            }
+            document.getElementById("subscription-message").innerText = message;
+        }
+    </script>
+</body>
+</html>
