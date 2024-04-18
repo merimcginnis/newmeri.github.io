@@ -21,7 +21,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         header {
-            background-color: #3e2723; /* Brown color */
+            background-color: #ab8e72; /* Brown color */
             color: #ffffff;
             padding: 10px;
             text-align: center;
@@ -78,7 +78,7 @@
             margin-bottom: 20px;
         }
         .faq li strong {
-            color: #3e2723; /* Brown color */
+            color: #ab8e72; /* Brown color */
         }
         .contact-form {
             margin-top: 50px;
@@ -118,32 +118,34 @@
         <h2>Subscribe to School Supplies</h2>
         <div class="subscription-options">
             <div class="subscription-option">
-                <button onclick="subscribe('basic')">Basic Subscription</button>
-                <button onclick="subscribe('standard')">Standard Subscription</button>
-                <button onclick="subscribe('premium')">Premium Subscription</button>
+                <button onclick="subscribe('basic')">Art Crate</button>
+                <button onclick="subscribe('standard')">Science Crate</button>
+                <button onclick="subscribe('premium')">Technology Crate</button>
             </div>
         </div>
         <p id="subscription-message"></p>
 
         <div class="about-us">
             <h2>About Us</h2>
-            <p>We are dedicated to providing high-quality school supplies to students around the world. Our mission is to make the process of obtaining school essentials convenient and affordable for everyone.</p>
+            <p>Empower students to thrive academically by providing convenient, affordable, and high-quality supplies and resources tailored to their diverse needs, fostering success throughout their educational journey.
+                
+            Dylan, Meri, Adry, and Chloe, students at Michigan State University, founded Campus Crates to simplify college life. Recognizing the hassle of getting supplies and textbooks, they launched a subscription service delivering essentials to students' doorsteps. With passion and teamwork, they quickly expanded, aiming to revolutionize the college experience nationwide.</p>
         </div>
 
         <div class="faq">
             <h2>FAQ</h2>
             <ul>
                 <li>
-                    <strong>Q: Can I cancel my subscription at any time?</strong><br>
-                    A: Yes, you can cancel your subscription anytime by contacting our customer support team.
+                    <strong>Q: What is Campus Crates?</strong><br>
+                    A: Campus Crates is a subscription service designed to provide college students with essential supplies, textbooks, and other resources tailored to their academic needs. We aim to simplify the college experience by delivering these items directly to students' doorsteps, saving them time and hassle.
                 </li>
                 <li>
-                    <strong>Q: How do I change my subscription plan?</strong><br>
-                    A: You can change your subscription plan by logging into your account and selecting the desired plan.
+                    <strong>Q: How does Campus Crates work?</strong><br>
+                    A: To get started with Campus Crates, simply sign up for a subscription plan on our website. You can choose from a variety of package options based on your academic interests and preferences. Once subscribed, you'll receive a curated selection of supplies and resources delivered to you at regular intervals throughout the semester.
                 </li>
                 <li>
-                    <strong>Q: When will I receive my first shipment?</strong><br>
-                    A: Your first shipment will be dispatched within 2-3 business days after subscribing.
+                    <strong>Q: Can I cancel or modify my Campus Crates subscription?</strong><br>
+                    A: Yes, you can manage your subscription through your account on our website. You can cancel, pause, or modify your subscription at any time before the next billing cycle. We strive to make the process as convenient as possible for our customers.
                 </li>
             </ul>
         </div>
@@ -168,13 +170,13 @@
             let message;
             switch (plan) {
                 case 'basic':
-                    message = "You subscribed to the Basic Subscription. You will receive essential school supplies.";
+                    message = "The Art Crate comes with items such as notepads, drawing pencils, rubber erasers, oil and acrylic paint, instruction art books, and other art related items.";
                     break;
                 case 'standard':
-                    message = "You subscribed to the Standard Subscription. You will receive a wider range of school supplies.";
+                    message = "The Science Crate comes with beakers, goggles, a tote, copper wire, crystals (to give you good energy), a stop watch, and other scientific supplies.";
                     break;
                 case 'premium':
-                    message = "You subscribed to the Premium Subscription. You will receive premium-quality school supplies.";
+                    message = "The Technology Crate contains a calculator, a keyboard and mouse, headphones, an hdmi cable, and all of the tech essentials that you may need. ";
                     break;
                 default:
                     message = "Invalid subscription option.";
