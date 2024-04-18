@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Supplies Subscription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff; /* Blue color */
+            text-align: center;
+        }
+        .subscription-options {
+            text-align: center;
+        }
+        .subscription-option button {
+            background-color: #007bff; /* Blue color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .subscription-option button:hover {
+            background-color: #0056b3; /* Darker blue color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Subscribe to School Supplies</h1>
+        <div class="subscription-options">
+            <div class="subscription-option">
+                <button onclick="subscribe('basic')">Basic Subscription</button>
+                <button onclick="subscribe('standard')">Standard Subscription</button>
+                <button onclick="subscribe('premium')">Premium Subscription</button>
+            </div>
+        </div>
+        <p id="subscription-message"></p>
+    </div>
+
+    <script>
+        function subscribe(plan) {
+            let message;
+            switch (plan) {
+                case 'basic':
+                    message = "You subscribed to the Basic Subscription. You will receive essential school supplies.";
+                    break;
+                case 'standard':
+                    message = "You subscribed to the Standard Subscription. You will receive a wider range of school supplies.";
+                    break;
+                case 'premium':
+                    message = "You subscribed to the Premium Subscription. You will receive premium-quality school supplies.";
+                    break;
+                default:
+                    message = "Invalid subscription option.";
+                    break;
+            }
+            document.getElementById("subscription-message").innerText = message;
+        }
+    </script>
+</body>
+</html>
